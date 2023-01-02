@@ -1,5 +1,4 @@
 package client;
-
 import java.io.DataInputStream;
 import java.io.PrintStream;
 import java.net.Socket;

@@ -6,8 +6,8 @@ import java.net.Socket;
 public class KKServerThread extends Thread {
     Socket clientSocket;
 
-    public KKServerThread( Socket clientSocket){
-        this.clientSocket=clientSocket;
+    public KKServerThread(Socket clientSocket) {
+        this.clientSocket = clientSocket;
     }
 
     @Override

@@ -1,7 +1,5 @@
 package server;
 
-import java.io.IOException;
-
 public class KKFunction {
     private static final int WAITING = 0;
     private static final int SENTKNOCKKNOCK = 1;
