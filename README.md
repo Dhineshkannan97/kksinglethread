@@ -1,5 +1,5 @@
 # kksinglethread
-step 1: Run the "KKServer" class.
+step 1: Run the "KKServer" class./n
 Step 2: Run the "KKClient" class.
 step 3: create a mutiple instance of the "KKclient" class
 step 4: Now, you should type "Who's there" in the client terminal.
