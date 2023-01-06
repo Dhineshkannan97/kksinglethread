@@ -14,6 +14,7 @@ public class KKServerThread extends Thread {
     public void run() {
         super.run();
         try {
+
             DataInputStream is = new DataInputStream(
                     new BufferedInputStream(clientSocket.getInputStream()));
             PrintStream os = new PrintStream(
@@ -24,23 +25,25 @@ public class KKServerThread extends Thread {
             outputLine = kkf.processInput(null);
             os.println(outputLine);
             os.flush();
+//
+
+            System.out.println("before while");
             while ((inputLine = is.readLine()) != null) {
+                System.out.println("inside while");
                 outputLine = kkf.processInput(inputLine);
-                File file = new File("C:\\Users\\Dhinesh Kannan\\IdeaProjects\\kksinglethread\\src\\main\\resources\\punchline1.html");
+                os.println(outputLine);
+                File file = new File(getClass().getClassLoader().getResourceAsStream("punchline1.html").toString());
                 BufferedWriter bw = new BufferedWriter(new FileWriter(file));
                 bw.write(outputLine);
                 bw.close();
-                os.println(outputLine);
                 os.flush();
                 if (outputLine.equals("Bye"))
                     break;
             }
-//            os.close();
-//            is.close();
-//            clientSocket.close();
-//            serverSocket.close();
+//
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 }

@@ -7,7 +7,7 @@ import java.net.UnknownHostException;
 public class KKClient {
     public  void socClient(){
         try {
-            Socket kkSocket = new Socket("localhost", 5555);
+            Socket kkSocket = new Socket("localhost", 8060);
             PrintStream os = new PrintStream(kkSocket.getOutputStream());
             DataInputStream is = new DataInputStream(kkSocket.getInputStream());
             StringBuffer buf = new StringBuffer(50);
@@ -23,7 +23,7 @@ public class KKClient {
                     buf.append((char) c);
                 }
                 System.out.println("Client: " + buf);
-                os.println(buf.toString());
+                os.println(buf);
                 os.flush();
                 buf.setLength(0);
             }
