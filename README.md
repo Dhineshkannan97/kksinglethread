@@ -6,8 +6,8 @@ step 4: Now, you should type "Who's there" in the client terminal.
 Step 5: Then server sent the clue in the terminl .(EX:Turnip)
 Step 6: Now , you suppose to type "turnip who?".
 step 7: After that the punchline will showing in Html file.
-*KKServer*
+*/KKServer/*
   *kkserverThread*
   *kkfuntions*
   
-*kkclient*  
+*/kkclient/*  
