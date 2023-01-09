@@ -23,8 +23,8 @@ public class KKServer {
                 System.out.println("Accept failed: " + 8060 + ", " + e);
                 System.exit(1);
             }
-            String httpResponse = "HTTP/1.1 200 OK\r\n\r\n";
-            clientSocket.getOutputStream().write(httpResponse.getBytes("UTF-8"));
+//            String httpResponse = "HTTP/1.1 200 OK\r\n\r\n";
+//            clientSocket.getOutputStream().write(httpResponse.getBytes("UTF-8"));
             Thread thread = new KKServerThread(clientSocket);
             thread.start();
         }

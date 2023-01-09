@@ -32,7 +32,7 @@ public class KKServerThread extends Thread {
                 System.out.println("inside while");
                 outputLine = kkf.processInput(inputLine);
                 os.println(outputLine);
-                File file = new File(getClass().getClassLoader().getResourceAsStream("punchline1.html").toString());
+                File file = new File(getClass().getClassLoader().getResourceAsStream("punchline2.html").toString());
                 BufferedWriter bw = new BufferedWriter(new FileWriter(file));
                 bw.write(outputLine);
                 bw.close();
